@@ -1,0 +1,1 @@
+MainPackage=c:\users\v-frche\documents\visual studio 2015\Projects\TitleBarApp1\TitleBarApp1\bin\x64\Debug\TitleBarApp1_1.0.0.0_x64_Debug.appx
