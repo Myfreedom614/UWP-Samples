@@ -1,0 +1,46 @@
+﻿{
+  "schedule": [
+
+    {
+      "event": "Event1",
+      "homeTeam": "homeTeam1",
+      "awayTeam": "awayTeam1"
+    }
+    
+    ,
+
+    {
+      "event": "Event2",
+      "homeTeam": "homeTeam2",
+      "awayTeam": "awayTeam2"
+    }
+    ,
+
+    {
+      "event": "Event1",
+      "homeTeam": "homeTeam3",
+      "awayTeam": "awayTeam3"
+    }
+    ,
+
+    {
+      "event": "Event2",
+      "homeTeam": "homeTeam4",
+      "awayTeam": "awayTeam4"
+    }
+    ,
+
+    {
+      "event": "Event3",
+      "homeTeam": "homeTeam5",
+      "awayTeam": "awayTeam5"
+    }
+     ,
+
+    {
+      "event": "Event3",
+      "homeTeam": "homeTeam6",
+      "awayTeam": "awayTeam6"
+    }
+  ]
+}
