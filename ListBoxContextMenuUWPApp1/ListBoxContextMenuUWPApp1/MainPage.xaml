@@ -19,7 +19,7 @@
 
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid PointerEntered="Grid_PointerEntered" >
+                    <Grid RightTapped="Grid_RightTapped" >
                         <FlyoutBase.AttachedFlyout>
                             <MenuFlyout>
                                 <MenuFlyoutItem x:Name="EditButton"

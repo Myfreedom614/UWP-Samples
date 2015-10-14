@@ -48,8 +48,8 @@ namespace ListBoxContextMenuUWPApp1
 
             //this datacontext is probably some object of some type T
         }
-
-        private void Grid_PointerEntered(object sender, PointerRoutedEventArgs e)
+        
+        private void Grid_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
             FrameworkElement senderElement = sender as FrameworkElement;
             FlyoutBase flyoutBase = FlyoutBase.GetAttachedFlyout(senderElement);
