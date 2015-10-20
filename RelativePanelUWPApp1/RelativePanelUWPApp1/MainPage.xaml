@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="RelativePanelUWPApp1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RelativePanelUWPApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="NarrowView">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Grid2.(RelativePanel.Below)" Value="Grid1"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="WideView">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Grid2.(RelativePanel.RightOf)" Value="Grid1"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <RelativePanel>
+            <Grid x:Name="Grid1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Row="0" FontSize="20" PlaceholderText="NOME" />
+            </Grid>
+            <Grid x:Name="Grid2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" FontSize="17" Text="Note" Foreground="#222222" Margin="20,15" ></TextBlock>
+                <TextBox Grid.Row="2" MaxLength="0" FontSize="17" Height="500" PlaceholderText="AGGIUNGI NOTA" ></TextBox>
+            </Grid>
+        </RelativePanel>
+    </Grid>
+</Page>
