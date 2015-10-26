@@ -29,7 +29,7 @@
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <SemanticZoom x:Name="GetLiveZoom"  >
+        <SemanticZoom x:Name="GetLiveZoom" Loaded="GetLiveZoom_Loaded"  >
             <SemanticZoom.ZoomedInView>
                 <GridView x:Name="GetLiveGrid" ItemsSource="{Binding ScheduleSource.View}" ItemTemplate="{StaticResource ZoomedInTemplate}" SelectionMode="Single"
                     ScrollViewer.IsHorizontalScrollChainingEnabled="False">
