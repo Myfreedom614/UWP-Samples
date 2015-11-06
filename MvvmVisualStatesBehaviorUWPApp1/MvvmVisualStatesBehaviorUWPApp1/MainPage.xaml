@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="MvvmVisualStatesBehaviorUWPApp1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MvvmVisualStatesBehaviorUWPApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:behavoir="using:MvvmVisualStatesBehaviorUWPApp1.Behavior"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="DefaultPanel" HorizontalAlignment="Center" 
+              VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Default State" 
+                           Style="{StaticResource SubheaderTextBlockStyle}" />
+                <Button Margin="0,20,0,0" Content="Go to Details state" 
+                        Command="{Binding GotoDetailsStateCommand}" />
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="DetailsPanel" HorizontalAlignment="Center" 
+              VerticalAlignment="Center" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Details State" 
+                           Style="{StaticResource SubheaderTextBlockStyle}"
+                           Foreground="Yellow" />
+                <TextBlock Text="Details message here..." 
+                           Style="{StaticResource TitleTextBlockStyle}" />
+                <Button Margin="0,20,0,0" Content="Go to Default state" 
+                        Command="{Binding GotoDefaultStateCommand}" />
+            </StackPanel>
+        </Grid>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="Default"/>
+
+                <VisualState x:Name="Details">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DefaultPanel" 
+                                                    Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DetailsPanel" 
+                                                    Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+
+    <i:Interaction.Behaviors>
+        <behavoir:EnumStateBehavior Value="{Binding CurrentState}" />
+    </i:Interaction.Behaviors>
+</Page>
