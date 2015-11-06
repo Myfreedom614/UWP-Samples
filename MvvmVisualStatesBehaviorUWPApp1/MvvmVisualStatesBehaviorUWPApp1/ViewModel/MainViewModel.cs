@@ -25,6 +25,7 @@ namespace MvvmVisualStatesBehaviorUWPApp1.ViewModel
             set
             {
                 this.Set(ref currentState, value);
+                OnCurrentStateChanged(value);
             }
         }
 
@@ -44,9 +45,9 @@ namespace MvvmVisualStatesBehaviorUWPApp1.ViewModel
             });
         }
 
-        public void OnCurrentStateChanged(object sender, VisualStateChangedEventArgs e)
+        public void OnCurrentStateChanged(ViewModelState e)
         {
-            Debug.WriteLine("CurrentStateChanged!");
+            Debug.WriteLine("CurrentStateChanged: " + e.ToString());
         }
     }
 }
