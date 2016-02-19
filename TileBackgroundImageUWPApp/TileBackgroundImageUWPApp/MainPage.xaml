@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="TileBackgroundImageUWPApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TileBackgroundImageUWPApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tileCtrl="using:TiledBackgroundControl"
+    mc:Ignorable="d">
+
+    <Grid x:Name="rootGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <tileCtrl:TiledBackground
+                               BackgroundImage="Assets/avatar1.png"
+                               Width="{Binding ActualWidth, ElementName=rootGrid}" Height="{Binding ActualHeight, ElementName=rootGrid}"/>
+    </Grid>
+</Page>
