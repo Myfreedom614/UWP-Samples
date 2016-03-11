@@ -9,4 +9,4 @@ https://msdn.microsoft.com/en-us/windows/uwp/monetize/add-and-use-the-ad-mediato
 
 ![alt text][screenshot]
 
-[eas-overview]: ../img/AdClientUWPApp.jpg "screenshot"
+[screenshot]: ../img/AdClientUWPApp.jpg "screenshot"
