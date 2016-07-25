@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="NearestColorUWPApp1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NearestColorUWPApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="10,30,0,0">
+            <TextBox x:Name="txtHexColor" Text="#2088C1" />
+            <Button x:Name="btn_Analysis" Content="Analysis" Click="btn_Analysis_Click" />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="The nearest Color name:" Foreground="Red" />
+                <TextBlock x:Name="tbOutput" Margin="10,0,0,0" FontWeight="Bold" />
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Page>
