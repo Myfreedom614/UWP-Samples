@@ -32,6 +32,7 @@ Samples for Windows 10 Universal Platform
  <tr>
   <td><a href="TileBackgroundImageUWPApp">TileBackgroundImage UWP Demo</a></td>
   <td><a href="TitleBarApp1">TitleBar UWP Demo</a></td>
+  <td><a href="AppServiceBridgeSample">AppService Bridge Sample</a></td>
  </tr>
 </table>
 

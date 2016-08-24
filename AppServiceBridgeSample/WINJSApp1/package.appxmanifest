@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  IgnorableNamespaces="uap mp rescap desktop">
+
+  <Identity
+    Name="0d7b058e-f7ca-4934-bf4e-02d06edcb24e"
+    Version="1.0.0.0"
+    Publisher="CN=yapchen" />
+
+  <mp:PhoneIdentity PhoneProductId="0d7b058e-f7ca-4934-bf4e-02d06edcb24e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+
+  <Properties>
+    <DisplayName>WINJSApp1</DisplayName>
+    <PublisherDisplayName>yapchen</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.0" MaxVersionTested="10.0.14393.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+
+  <Applications>
+    <Application 
+      Id="App"
+      StartPage="index.html"
+      >
+
+      <uap:VisualElements
+        DisplayName="WINJSApp1"
+        Description="WINJSApp1"
+        BackgroundColor="transparent"
+        Square150x150Logo="images\Square150x150Logo.png"
+        Square44x44Logo="images\Square44x44Logo.png">
+
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="images\splashscreen.png" />
+
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.appService" StartPage="index.html">
+          <uap:AppService Name="CommunicationService" />
+        </uap:Extension>
+        <desktop:Extension Category="windows.fullTrustProcess" Executable="BackgroundProcess.exe" EntryPoint="Windows.FullTrustApplication" />
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+
+</Package>
