@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WorkingWithListview.CustomCellXaml" Padding="0, 20, 0, 0" Title="Custom Cell"
+             xmlns:local="clr-namespace:WorkingWithListview;assembly=WorkingWithListview"
+             >
+	<!--<ListView x:Name="listView" ItemSelected="OnItemSelected">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+						<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+							<Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Medium" />
+							<Label Text="Label 2" VerticalTextAlignment="Center" FontSize="Small" />
+						</StackLayout>
+						<Button Text="X" BackgroundColor="Gray" HorizontalOptions="EndAndExpand" CommandParameter="{Binding .}" Clicked="OnCellClicked" />
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>-->
+  <ListView
+         x:Name="listProjects"
+         HasUnevenRows="true"
+         SeparatorVisibility="None"
+         HorizontalOptions="FillAndExpand">
+
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <!--<ViewCell>
+          <StackLayout  Padding="15,15,15,15" BackgroundColor="Transparent">
+            <Editor HeightRequest="50" FontSize="Small"/>
+          </StackLayout>
+        </ViewCell>-->
+        <local:NativeCell Name="{Binding Name}" Category="{Binding Category}" />
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>
