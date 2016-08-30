@@ -34,6 +34,16 @@ Samples for Windows 10 Universal Platform
   <td><a href="TitleBarApp1">TitleBar UWP Demo</a></td>
   <td><a href="AppServiceBridgeSample">AppService Bridge Sample</a></td>
  </tr>
+ <tr>
+  <td><a href="UWPCreateCurCPPAPP1">UWP Create Cursor Demo</a></td>
+  <td><a href="WorkingWithListview">The workaround for Editor scroll issue inside Xamarin ListView</a></td>
+  <td><a href="WebViewCustomHeaderUWPApp1">Custom header for WebView Demo</a></td>
+ </tr>
+ <tr>
+  <td><a href="AudioGraphBackgroundPlayback">AudioGraph Background Playback UWP Demo</a></td>
+  <td></td>
+  <td></td>
+ </tr>
 </table>
 
 ## Screenshot for some samples:
