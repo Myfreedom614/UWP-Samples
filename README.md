@@ -41,7 +41,7 @@ Samples for Windows 10 Universal Platform
  </tr>
  <tr>
   <td><a href="AudioGraphBackgroundPlayback">AudioGraph Background Playback UWP Demo</a></td>
-  <td></td>
+  <td><a href="WorkingWithImages">Xamarin UWP: Save image from ImageSource</a></td>
   <td></td>
  </tr>
 </table>
