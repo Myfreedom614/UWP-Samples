@@ -42,7 +42,7 @@ Samples for Windows 10 Universal Platform
  <tr>
   <td><a href="AudioGraphBackgroundPlayback">AudioGraph Background Playback UWP Demo</a></td>
   <td><a href="WorkingWithImages">Xamarin UWP: Save image from ImageSource</a></td>
-  <td></td>
+  <td><a href="WinRTXamlToolkitChartingVBApp1">WinRTXamlToolkitCharting VB.net sample</a></td>
  </tr>
 </table>
 
