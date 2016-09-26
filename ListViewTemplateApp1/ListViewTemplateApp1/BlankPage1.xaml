@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="ListViewTemplateApp1.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ListViewTemplateApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="dataTemplate1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="->" />
+                <TextBlock Text="{Binding}" />
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView SelectionChanged="ListView_SelectionChanged">
+            <ListView.Items>
+                <ListViewItem Content="One"></ListViewItem>
+                <ListViewItem Content="Two"></ListViewItem>
+                <ListViewItem Content="Three"></ListViewItem>
+            </ListView.Items>
+        </ListView>
+    </Grid>
+</Page>
