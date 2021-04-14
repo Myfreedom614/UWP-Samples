@@ -46,6 +46,7 @@ Samples for Windows 10 Universal Platform
  </tr>
  <tr>
   <td><a href="MultipleCameraFrames">Multiple Camera Frames UWP Demo</a></td>
+  <td><a href="UWPDllSample">UWP C++ Dynamic Library Simple Sample</a></td>
  </tr>
 </table>
 
